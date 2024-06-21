@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Noto Sans, sans-serif;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #296929;
+}
+
+.container {
+  font-size: 16px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+  background: #ffffffe7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav .nav-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  z-index: 99;
+  position: relative;
+}
+
+nav .nav-section ul {
+  display: none;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.menu-open {
+  background: #ffffffe7;
+  top: 85px;
+  left: 0;
+}
+
+.menu-open ul li {
+  padding: 5px;
+  margin: 2px 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-bottom 0.5s ease-in-out;
+}
+
+.menu-open ul li:hover {
+  border-bottom: 1px solid #3a963a;
+}
+
+/* Hero */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 90px auto 0;
+  position: relative;
+}
+
+.hero-text {
+  background: linear-gradient(hsla(0, 0%, 99%, 0), hsla(0, 0%, 0%, 0.8));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-section h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #a7eea7;
+  font-weight: 800;
+  font-size: 26px;
+  border-radius: 8px;
+  padding: 5px 0;
+  text-align: center;
+  text-shadow: 0 0 5px #000;
+}
+
+.hero-image {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+
+/* Profile Section */
+.profile-section {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.profile-section h1 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #296929;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.profile-section p {
+  font-size: 0.9rem;
+  color: #353131;
+}
+
+/* Product & Services */
+.p-and-s-section {
+  text-align: center;
+}
+.p-and-s-section .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  align-items: stretch;
+}
+
+.p-and-s-section .card {
+  background: linear-gradient(hsla(0, 0%, 6%, 0.1), hsla(0, 0%, 100%, 0)),
+    url("assets/images/product-and-services/Seeds.jpg");
+  background-position: center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: fit-content;
+  padding: 15em 0 0;
+  margin-bottom: 20px;
+  transition: all 0.6s ease-in;
+}
+
+.p-and-s-section .card:hover {
+  background: linear-gradient(hsla(0, 0%, 99%, 0), hsla(0, 0%, 100%, 0.9)),
+    url("assets/images/product-and-services/Seeds.jpg");
+  background-position: center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+}
+
+.p-and-s-section .cards .card h3,
+.p-and-s-section .cards .card p {
+  background: #fff;
+  color: #333;
+  margin: 0;
+  padding: 20px 0 20px;
+  width: 100%;
+  transition: all 0.6s ease-in;
+}
+
+.p-and-s-section .cards .card h3 {
+  color: #296929;
+}
+
+.p-and-s-section .cards .card:hover h3,
+.p-and-s-section .cards .card:hover p {
+  background-color: transparent;
+  padding: 0 10px 30px;
+}
+
+.p-and-s-section h2 {
+  color: #296929;
+}
+
+.p-and-s-section h3 {
+  color: #fff;
+}
+
+.p-and-s-section p {
+  color: #fff;
+}
+
+/* About */
+.about-section {
+  background-image: radial-gradient(
+      circle,
+      hsla(0, 0%, 99%, 0),
+      hsla(0, 0%, 0%, 0.3) 39%,
+      hsla(0, 0%, 0%, 0.6)
+    ),
+    url("assets/images/about/VEGETATION.jpg");
+  background-position: 0 0, 50%;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section .about-card {
+  margin: 0 auto;
+  padding: 15px 5%;
+}
+
+.about-section .mission {
+  background: #fff;
+  color: #333;
+  padding: 20px 0;
+}
+
+/* Contact Us Section */
+.contact-section {
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #296929;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  padding: 5px 20%;
+}
+
+.contact-section .icon {
+  color: #296929;
+  font-size: 30px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+
+.contact-section .icon:hover {
+  color: #3a963a;
+}
+
+/* Footer */
+footer {
+  background-color: #296929;
+  color: #fff;
+  text-align: center;
+}
+
+footer p {
+  margin-top: 0;
+  line-height: 15px;
+}
+
+footer .container .ft-logo {
+  width: 150px;
+  height: 150px;
+}
+
+footer .container .subs-input {
+  width: 100%;
+}
+
+footer .container .subs-input label {
+  display: block;
+  text-align: left;
+}
+
+footer .container .subs-input input {
+  font-size: 15px;
+  width: 77%;
+  padding: 10px;
+  margin-right: 8px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+}
+
+footer .container .subs-input input:focus {
+  outline: none;
+}
+
+footer .container .subs-input button {
+  background: #fff;
+  color: #296929;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 20%;
+  padding: 13px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer .container .subs-input button:hover {
+  background: #cfcbcb;
+  color: #3a963a;
+}
+
+footer a {
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .copyright {
+  font-size: 12px;
+}
+
+footer hr {
+  margin-top: 20px;
+  color: #fff;
+}
+
+footer .signature {
+  background: #184718;
+  font-size: 14px;
+  width: 100vw;
+  padding: 20px 0 40px;
+}
+
+@media (min-width: 799px) {
+  nav .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .menu ul li {
+    border: 1px solid transparent;
+    transition: border-bottom 0.5s ease-out;
+  }
+
+  .menu ul li:hover {
+    border-bottom: 2px solid #3a963a;
+  }
+
+  /* Hero Section */
+  .hero-section .hero-image {
+    height: 80vh;
+  }
+
+  /* Navigation */
+  nav {
+    background: linear-gradient(to bottom, #fff, #ffffff00);
+    filter: drop-shadow(rgb(255, 255, 255) 0 1rem 10px);
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  nav .nav-section .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  nav .nav-section ul {
+    display: flex;
+    margin: auto 0;
+    padding: 0;
+  }
+
+  nav .nav-section ul li {
+    color: #3a963a;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  nav .nav-section ul li:hover {
+    color: #296929;
+  }
+
+  .hamburger,
+  .mobile-menu {
+    display: none;
+  }
+
+  /* Profile Section */
+  .profile-section {
+    width: 60%;
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .profile-section h1 {
+    color: #296929;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  /* Product & Services */
+  .p-and-s-section {
+    margin-bottom: 35px;
+  }
+
+  .p-and-s-section h3 {
+    margin-top: 150px;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    bottom: 223px;
+    left: 0;
+    right: 0;
+    width: 45px;
+    padding: 10px 20px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 0;
+  }
+
+  .contact-section .icon {
+    font-size: 25px;
+  }
+
+  /* About Section */
+  .about-section .about-card p {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px;
+  }
+
+  /* Footer */
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer .container .info .logo-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  footer .container .subs-input {
+    width: 50%;
+    margin-top: 160px;
+    text-align: left;
+  }
+
+  footer .container .info {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  footer .copyright {
+    margin-top: 15px;
+  }
+
+  hr {
+    display: none;
+  }
+}
