@@ -79,7 +79,7 @@ nav .nav-section ul {
 
 .menu-open {
   background: #ffffffe7;
-  top: 85px;
+  top: 84px;
   left: 0;
 }
 
@@ -101,7 +101,7 @@ nav .nav-section ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 99px auto 0;
+  margin: 0 auto 0;
   position: relative;
 }
 
@@ -129,6 +129,7 @@ nav .nav-section ul {
 }
 
 .hero-image {
+  margin-top: 86px;
   width: 100%;
   height: 65vh;
   object-fit: cover;
@@ -160,12 +161,13 @@ nav .nav-section ul {
 }
 .p-and-s-section .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 1em;
   align-items: stretch;
+  justify-content: center;
 }
 
-.p-and-s-section .card {
+.p-and-s-section .cards .card1 {
   background: linear-gradient(hsla(0, 0%, 6%, 0.1), hsla(0, 0%, 100%, 0)),
     url("assets/images/product-and-services/Seeds.jpg");
   background-position: center;
@@ -174,37 +176,77 @@ nav .nav-section ul {
   width: 100%;
   height: fit-content;
   padding: 15em 0 0;
-  margin-bottom: 20px;
-  transition: all 0.6s ease-in;
+  margin: 0 auto 20px;
 }
 
-.p-and-s-section .card:hover {
-  background: linear-gradient(hsla(0, 0%, 99%, 0), hsla(0, 0%, 100%, 0.9)),
-    url("assets/images/product-and-services/Seeds.jpg");
+.p-and-s-section .cards .card2 {
+  background: linear-gradient(hsla(0, 0%, 6%, 0.1), hsla(0, 0%, 100%, 0)),
+    url("assets/images/product-and-services/market-distro.png");
   background-position: center;
   background-size: auto, cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: fit-content;
+  padding: 15em 0 0;
+  margin: 0 auto 20px;
+}
+
+.p-and-s-section .cards .card3 {
+  background: linear-gradient(hsla(0, 0%, 6%, 0.1), hsla(0, 0%, 100%, 0)),
+    url("assets/images/product-and-services/Logistics-Service.webp");
+  background-position: center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: fit-content;
+  padding: 15em 0 0;
+  margin: 0 auto 20px;
+}
+
+.p-and-s-section .cards .card4 {
+  background: linear-gradient(hsla(0, 0%, 6%, 0.1), hsla(0, 0%, 100%, 0)),
+    url("assets/images/product-and-services/agro-store.webp");
+  background-position: center;
+  background-size: auto, cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: fit-content;
+  padding: 15em 0 0;
+  margin: 0 auto 20px;
 }
 
 .p-and-s-section .cards .card h3,
 .p-and-s-section .cards .card p {
-  background: #fff;
   color: #333;
   margin: 0;
-  padding: 20px 0 20px;
+  padding: 20px 0;
   width: 100%;
-  transition: all 0.6s ease-in;
+}
+
+/* .p-and-s-section .cards .card div {
+  background-color: #fff;
+  padding-bottom: 20px;
+  transition: all 0.6s ease-in-out;
+} */
+
+.p-and-s-section .cards .card div {
+  background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 100%, 0),
+    hsl(0, 0%, 100%)
+  );
+  filter: drop-shadow(rgb(255, 255, 255) 0 0.5rem 10px);
+  padding-bottom: 0px;
 }
 
 .p-and-s-section .cards .card h3 {
   color: #296929;
 }
 
-.p-and-s-section .cards .card:hover h3,
-.p-and-s-section .cards .card:hover p {
+/* .p-and-s-section .cards .card:hover h3 {
   background-color: transparent;
   padding: 0 10px 30px;
-}
+} */
 
 .p-and-s-section h2 {
   color: #296929;
@@ -244,7 +286,7 @@ nav .nav-section ul {
 .about-section .mission {
   background: #fff;
   color: #333;
-  padding: 20px 0;
+  padding: 10% 8%;
 }
 
 /* Contact Us Section */
@@ -300,10 +342,9 @@ footer .container .subs-input label {
 
 footer .container .subs-input input {
   font-size: 15px;
-  width: 77%;
+  width: 100%;
   padding: 10px;
-  margin-right: 8px;
-  margin-top: 10px;
+  margin: 10px 8px 10px 0;
   border-radius: 4px;
   border: none;
 }
@@ -318,7 +359,7 @@ footer .container .subs-input button {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  width: 20%;
+  width: 100%;
   padding: 13px 0;
   border: none;
   border-radius: 4px;
@@ -367,7 +408,12 @@ footer .signature {
   }
 
   /* Hero Section */
+  .hero-section {
+    margin: 0 auto;
+  }
+
   .hero-section .hero-image {
+    margin-top: 100px;
     height: 80vh;
   }
 
@@ -427,8 +473,29 @@ footer .signature {
     margin-bottom: 35px;
   }
 
+  .p-and-s-section .cards .card div {
+    background-color: #fff;
+    padding-bottom: 20px;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .p-and-s-section .cards .card:hover div {
+    background: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 100%, 0),
+      hsl(0, 0%, 100%)
+    );
+    filter: drop-shadow(rgb(255, 255, 255) 0 0.5rem 10px);
+    padding-bottom: 0px;
+  }
+
   .p-and-s-section h3 {
     margin-top: 150px;
+  }
+
+  /* About Section */
+  .about-section .about-card {
+    padding: 50px 100px;
   }
 
   /* Contact Section */
@@ -478,6 +545,14 @@ footer .signature {
     width: 50%;
     margin-top: 160px;
     text-align: left;
+  }
+
+  footer .container .subs-input input {
+    width: 77%;
+  }
+
+  footer .container .subs-input button {
+    width: 20%;
   }
 
   footer .container .info {
